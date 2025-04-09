@@ -1,0 +1,522 @@
+/* Main Styles */
+:root {
+    --primary-color: #00f7ff;
+    --secondary-color: #ff00c8;
+    --background-color: #0a0a0a;
+    --card-bg-color: rgba(18, 18, 18, 0.85);
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    --gradient-start: #00f7ff;
+    --gradient-end: #ff00c8;
+    --hover-color: #5d5d5d;
+    --card-border: 1px solid rgba(255, 255, 255, 0.1);
+    --animation-timing: 0.3s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Particles Background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    margin: 0 auto 2rem;
+    border-radius: 10px;
+}
+
+.section-title {
+    margin-bottom: 3rem;
+}
+
+.lead {
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+/* Navigation */
+.navbar {
+    background-color: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 4px;
+    transition: all var(--animation-timing) ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding: 2rem 0;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.typing-text::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 0.8rem 1.8rem;
+    font-weight: 600;
+    transition: all var(--animation-timing) ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--gradient-end), var(--gradient-start));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-light {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.animated-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end), var(--gradient-start));
+    background-size: 200% 200%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.animated-btn:hover::before {
+    opacity: 1;
+    animation: gradient-animation 2s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Floating Animation for Hero Image */
+.hero-image {
+    position: relative;
+}
+
+.floating {
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.circle-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    opacity: 0.2;
+}
+
+.c1 {
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    transform: translate(-50%, -50%);
+    animation: pulse 8s infinite alternate;
+}
+
+.c2 {
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    animation: pulse 6s infinite alternate-reverse;
+}
+
+.c3 {
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    animation: pulse 4s infinite alternate;
+}
+
+.c4 {
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    animation: pulse 2s infinite alternate-reverse;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+    50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.3; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 0.2; }
+}
+
+.hero-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Cards */
+.card-base, .github-card, .youtube-card, .itch-card, .contact-info, .project-card, .style-card, .cta-card, .contact-info-card, .social-badges-card, .youtube-contact-card {
+    background-color: var(--card-bg-color);
+    border: var(--card-border);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: all var(--animation-timing) ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.card-base:hover, .github-card:hover, .youtube-card:hover, .itch-card:hover, .contact-info:hover, .project-card:hover, .style-card:hover, .cta-card:hover, .contact-info-card:hover, .social-badges-card:hover, .youtube-contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.card-icon {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(0, 247, 255, 0.1), rgba(255, 0, 200, 0.1));
+    margin-bottom: 1.5rem;
+}
+
+/* GitHub Cards */
+.github-card, .contact-info {
+    text-align: center;
+}
+
+.github-badges img, .social-badges img {
+    margin: 0.2rem;
+}
+
+.counter-container {
+    margin-top: 1rem;
+}
+
+/* YouTube Section */
+.youtube-section {
+    margin: 4rem 0;
+}
+
+.youtube-badges img {
+    margin: 0.5rem 0;
+}
+
+/* Features List */
+.features-list {
+    margin-top: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.feature-item i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+/* Contact Section */
+.contact-buttons {
+    margin-top: 2rem;
+}
+
+.btn-contact {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    transition: all var(--animation-timing) ease;
+    width: 100%;
+    text-align: left;
+}
+
+.btn-contact:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.contact-method {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-method:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-method h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(10, 10, 10, 0.9);
+    padding: 2rem 0;
+    backdrop-filter: blur(10px);
+    margin-top: 2rem;
+}
+
+.footer-badges img {
+    margin: 0.2rem;
+}
+
+/* Page Header */
+.page-header {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+/* Projects Page */
+.intro-text {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('https://images.unsplash.com/photo-1503332132010-d1b77a049ddd') center/cover no-repeat fixed;
+    padding: 5rem 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+        min-height: auto;
+    }
+    
+    .card-base, .github-card, .youtube-card, .itch-card, .contact-info, .project-card, .style-card, .cta-card, .contact-info-card, .social-badges-card, .youtube-contact-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons .btn-outline-light {
+        margin-left: 0 !important;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .footer-badges img {
+        display: block;
+        margin: 0.5rem auto;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.slide-up {
+    animation: slideInUp 1s ease-out;
+}
+
+.slide-left {
+    animation: slideInLeft 1s ease-out;
+}
+
+.slide-right {
+    animation: slideInRight 1s ease-out;
+}

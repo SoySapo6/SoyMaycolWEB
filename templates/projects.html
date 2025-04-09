@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - SoyMaycol</title>
+    <meta name="description" content="Descubre los proyectos de Maycol, desarrollador y creador de bots para WhatsApp">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <span class="text-gradient">SoyMaycol</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h1 class="display-4 fw-bold text-gradient">Mis Proyectos</h1>
+                    <p class="lead">Bienvenidos a los Proyectos de Maycol AI</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Projects Section -->
+    <section class="projects-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5">
+                    <div class="intro-text" data-aos="fade-up">
+                        <p>¡Hola! Soy Maycol AI, y esta es mi web donde podrás explorar todos los proyectos en los que he estado trabajando. Soy un desarrollador curioso y creativo, siempre buscando nuevas formas de innovar y llevar mi bot de WhatsApp al siguiente nivel. Mis proyectos están diseñados para ser útiles, entretenidos y sobre todo, fáciles de usar. Aquí te detallo cada uno de ellos, mostrando lo que he logrado hasta ahora.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Style Section -->
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="style-card">
+                        <h2 class="text-gradient">Mi Estilo de Desarrollo</h2>
+                        <div class="title-underline mb-4"></div>
+                        <p>Me gusta mantener las cosas simples, claras y eficaces. Mi enfoque está en crear experiencias únicas y accesibles, sin importar las limitaciones del dispositivo (como mi Android Go). Además, me gusta la flexibilidad: mis proyectos son tan fáciles de implementar como de personalizar. No sigo tendencias, ¡yo las creo! Mi estilo es innovador, con un toque de humor y creatividad en cada línea de código que escribo. ¡Y siempre con mucho baile! 💃💃</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Cards -->
+            <div class="row">
+                <!-- WhatsApp Bot Project -->
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="project-card">
+                        <div class="card-icon mb-3">
+                            <i class="fab fa-whatsapp fa-3x text-gradient"></i>
+                        </div>
+                        <h3>Bot de WhatsApp con Baileys</h3>
+                        <p>Mi bot de WhatsApp es el corazón de mis proyectos. Utiliza Baileys en modo NO Multi-Device para ofrecer una experiencia única, y he estructurado el código en múltiples archivos para que sea fácil de mantener.</p>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Comandos como <code>serbot</code> para conectar usuarios con códigos de sesión únicos</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Integración de APIs de Google, OpenRouter, RapidAPI y más</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Simulador de Streamer con hackers y haters</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>MayOS: Simulador de sistema operativo dentro del bot</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Juego "KarKat": Mascota virtual interactiva</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stickers & QR Project -->
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="project-card">
+                        <div class="card-icon mb-3">
+                            <i class="far fa-image fa-3x text-gradient"></i>
+                        </div>
+                        <h3>Generación de Stickers y QR</h3>
+                        <p>Uno de los aspectos divertidos de mi bot es la capacidad de generar stickers personalizados y códigos QR. Con comandos como <code>qr (contenido)</code> o <code>qrsticker (contenido)</code>, puedo crear imágenes en formato QR y enviarlas directamente como stickers, ¡todo desde mi teléfono Android Go!</p>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Generación automática de stickers desde imágenes</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Creación de códigos QR personalizados</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Conversión de QR a stickers de WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Games & Entertainment Project -->
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="project-card">
+                        <div class="card-icon mb-3">
+                            <i class="fas fa-gamepad fa-3x text-gradient"></i>
+                        </div>
+                        <h3>Juegos y Entretenimiento</h3>
+                        <p>Mis proyectos no solo se limitan a utilidades, también me encanta ofrecer opciones de entretenimiento.</p>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>"KarKat": Simulador de mascota virtual al estilo Pou</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Simuladores de Chat con comandos <code>chatOpenRouter</code> y <code>chatm</code></span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Conversaciones roleplay con inteligencia artificial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web & API Project -->
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="project-card">
+                        <div class="card-icon mb-3">
+                            <i class="fas fa-code fa-3x text-gradient"></i>
+                        </div>
+                        <h3>Desarrollo Web y API</h3>
+                        <p>Aunque desarrollo mi bot usando Termux y un editor de código, también he comenzado a trabajar en una web personalizada para mi bot. Esta web contará con una API y bases de datos para que otros puedan integrarse fácilmente.</p>
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Web personalizada para el bot</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>API para integración con otros servicios</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Alojamiento compatible con Replit, Heroku y Oracle Cloud Free Tier</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Plataforma accesible y gratuita</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unique Style Section -->
+            <div class="row mt-5">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="style-card">
+                        <h2 class="text-gradient">Un Estilo Único: Simple, Creativo y Funcional</h2>
+                        <div class="title-underline mb-4"></div>
+                        <p>Lo que más me importa al desarrollar es la funcionalidad sin sacrificar la diversión. No me gustan las dependencias innecesarias ni complicar las cosas con configuraciones demasiado complejas. Mis proyectos son ligeros, fáciles de entender y diseñados para ser accesibles desde cualquier dispositivo. Todo está creado con el pensamiento de que debe ser usable por cualquier persona, sin importar si son expertos en programación o no.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How I Do It Section -->
+            <div class="row mt-4">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="style-card">
+                        <h2 class="text-gradient">¿Cómo lo hago?</h2>
+                        <div class="title-underline mb-4"></div>
+                        <p>Soy un autodidacta que utiliza herramientas como Termux, ZArchiver y editores de código disponibles en Play Store para crear todo esto. No uso GitHub ni Railway, porque me gusta mantener las cosas sencillas y privadas. Pero no te preocupes, todo lo que desarrollo está pensado para ser accesible y fácil de usar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Section -->
+            <div class="row mt-4">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="style-card">
+                        <h2 class="text-gradient">El Futuro</h2>
+                        <div class="title-underline mb-4"></div>
+                        <p>Estoy constantemente aprendiendo y buscando nuevas ideas. Mis proyectos seguirán creciendo, y planeo integrar más tecnologías como Gemini, OpenRouter, y nuevas APIs que hagan que el bot sea aún más impresionante.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's Next Section -->
+            <div class="row mt-4">
+                <div class="col-12" data-aos="fade-up">
+                    <div class="style-card">
+                        <h2 class="text-gradient">¿Qué sigue?</h2>
+                        <div class="title-underline mb-4"></div>
+                        <p>Si eres un desarrollador o simplemente un usuario curioso que quiere probar lo que he creado, esta web es para ti. Podrás acceder a todas las funcionalidades del bot, como ejecutar código en múltiples lenguajes, descargar videos, interactuar con AI, y mucho más. Y si tienes una idea, ¡no dudes en decírmelo! Estoy aquí para innovar, aprender y seguir mejorando.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center" data-aos="zoom-in">
+                    <div class="cta-card">
+                        <h2 class="text-gradient mb-4">¿Quieres colaborar en un proyecto?</h2>
+                        <p class="mb-4">Estoy siempre abierto a nuevas ideas y colaboraciones. Si tienes un proyecto en mente o quieres utilizar alguna de mis creaciones, ¡contáctame!</p>
+                        <a href="/contact" class="btn btn-primary btn-lg animated-btn">Contactar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span>&copy; 2023 SoyMaycol. Todos los derechos reservados.</span>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end">
+                    <div class="footer-badges">
+                        <a href="https://wa.me/51921826291">
+                            <img src="https://img.shields.io/badge/WhatsApp-Contactar-25D366?style=for-the-badge&logo=whatsapp">
+                        </a>
+                        <a href="mailto:karatekidamericatv@gmail.com">
+                            <img src="https://img.shields.io/badge/Email-Enviame%20un%20un%20correo-EA4335?style=for-the-badge&logo=gmail">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Visitas: <span id="visit-counter">{{ visit_count }}</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Particles.js -->
+    <script src="{{ url_for('static', filename='js/particles.min.js') }}"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
